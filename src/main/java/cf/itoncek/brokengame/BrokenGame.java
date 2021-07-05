@@ -32,16 +32,13 @@ public final class BrokenGame extends JavaPlugin {
             }
             new BukkitRunnable() {
                 public void run() {
-                    Bukkit.getScheduler().runTaskTimerAsynchronously(this, new Runnable() {
-
-                        @Override
-                        public void run() {
-                            for (Player player : Bukkit.getOnlinePlayers()) {
-                                player.setResourcePack("");
-                            }
-                        }
-
-                    }, 0, 20L);
+                    for (Player player : Bukkit.getOnlinePlayers()) {
+                        player.setResourcePack("https://github.com/IToncek/brokentextures/raw/main/rsrcs/" + i + ".zip");
+                        player.sendTitle("Updating", "Please accept all resourcepacks!", 1, 5, 1);
+                        player.sendMessage(ChatColor.DARK_RED + "" + ChatColor.BOLD + "PLEASE ACCEPT ALL RESOURCEPACK REQUESTS!");
+                        player.sendMessage(ChatColor.DARK_GRAY + "" + ChatColor.ITALIC + "This is resourcepack update #" + i);
+                    }
+                    i++;
                 }
             }.runTaskTimer(this, 20L*5, 20L * 120);
             return false;
