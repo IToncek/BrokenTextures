@@ -1,0 +1,9 @@
+name: BrokenGame
+version: ${project.version}
+main: cf.itoncek.brokengame.BrokenGame
+api-version: 1.17
+authors: [ IToncek ]
+commands:
+  start:
+    description: Shows GUI to start the game
+    usage: /start
