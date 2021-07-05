@@ -28,7 +28,6 @@ public final class BrokenGame extends JavaPlugin {
             Bukkit.broadcastMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "We're starting, please accept all resourcepacks!");
             for (Player player : Bukkit.getOnlinePlayers()) {
                 player.sendTitle("Starting", "Please accept all resourcepacks!", 1, 5, 1);
-                player.sendMessage(ChatColor.DARK_RED + "" + ChatColor.BOLD + "PLEASE ACCEPT ALL RESOURCEPACK REQUESTS!");
             }
             new BukkitRunnable() {
                 public void run() {
